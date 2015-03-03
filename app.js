@@ -13,13 +13,14 @@ app.get('/', function(req, res){
 });
 
 app.get('/getuser',function(req,res){
-	var usuario = { nombre:'Francisco',
+	var usuario = { 
+					nombre:"Francisco",
 					universidad:'Uni'};
-		res.send(usuario)			;
+		res.send(usuario);
 
 });
 
-var port = app.set('port', (process.env.PORT || 3000))
+var port = Number(process.env.PORT || 3000);
 var server = app.listen(port, function () {
     console.log('server listening on port ' + port);
 });
