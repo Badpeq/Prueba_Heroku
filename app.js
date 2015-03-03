@@ -19,7 +19,7 @@ app.get('/getuser',function(req,res){
 
 });
 
-var port = 3000;
+var port = app.set('port', (process.env.PORT || 3000))
 var server = app.listen(port, function () {
     console.log('server listening on port ' + port);
 });
