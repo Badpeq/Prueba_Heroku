@@ -13,10 +13,11 @@ app.get('/', function(req, res){
 });
 
 app.get('/getuser',function(req,res){
-	var usuario = { 
-					nombre:"Francisco",
-					universidad:'Uni'};
-		res.send(usuario);
+	var user = {
+	    nombre: "Hans",
+	    hobbie: "codear"
+	};
+		res.send(user);
 
 });
 
